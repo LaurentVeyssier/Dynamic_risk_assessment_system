@@ -31,6 +31,9 @@ The model API should be launched before executing project components. This can b
 - reporting.py allows to generate a full pdf report gathering performance plots, metrics and other useful statistics
 - fullprocess.py should be run regularly using a CRON job. It monitors new data availability, checks model drift, decides to retrain and redeploy an updated model in case shifting is detected.
 
+# Initialization
+For the process implementation, a first model should be trained and implemented. this can be done by running all individual components (ingestion, training, scoring, deployment) using practicedata and practicemodels folders in the config.json file (modify input_folder, output_model variables). Once initialization is performed, modify config.json back to production stage using sourcedata and models folders respectively, then implement fullprocess.py script for process automation in production.
+
 # Cron job implementation
 - activate cron jobs in WSL2 using sudo service cron start (if not already active)
 - create a new cron job using crontab -e
