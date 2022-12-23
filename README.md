@@ -1,4 +1,4 @@
-# Dynamic_risk_assessment_system
+# Dynamic risk assessment system
 Project #4 from Udacity's ML DevOps engineer Nanodegree 
 
 # Project Overview: Training, Scoring, and Deploying an ML Model
