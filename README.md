@@ -21,7 +21,7 @@ The workflow is broken down into the following components which are all separate
 
 # How to use
 The project is deployed under windows python WSL2 linux. Deployed API using Flask framework.
-The model API should be launched before executing project components. This can be achieved by running app.py script which instantiate all project API's endpoints including inference capability. Other components of the project include:
+The model API should be launched before executing project components. This can be achieved by running app.py script instantiating multiple project API endpoints including inference capability. Other components of the project include:
 - ingestion.py to ingest data and prepare model training
 - training.py to train a logisticregression model
 - scoring.py to score the model in production against a test dataset
