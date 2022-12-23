@@ -28,6 +28,7 @@ prod_deployment_path = config['prod_deployment_path']
 model_path = config['output_model_path']
 
 move_to_next_step = False
+logging.info("Launching automated monitoring")
 ##################Check and read new data
 #first, read ingestedfiles.txt
 filepath = os.path.join(prod_deployment_path,'ingestedfiles.txt')
@@ -44,7 +45,8 @@ if files !=[]:
     logging.info("ingesting new files")
     ingestion.merge_multiple_dataframe()
     move_to_next_step = True
-
+else:
+    logging.info("No new files - ending process")
 ##################Checking for model drift
 """There are two possible scenarios here:
 - We train a new model on new data and then compare the performance of the new model 

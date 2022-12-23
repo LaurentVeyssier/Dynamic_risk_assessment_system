@@ -1,0 +1,1 @@
+*/10 * * * * (cd /home/laurent/GitHub/Dynamic_risk_assessment_system/ && python fullprocess.py)
